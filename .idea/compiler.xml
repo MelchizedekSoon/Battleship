@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17">
+      <module name="Battleship1.Battleship-task-build-classes-java.main" target="11" />
+      <module name="Battleship1.Battleship-task-build-generated-sources-annotationProcessor-java.main" target="11" />
+      <module name="Battleship1.Battleship-task-build-generated-sources-headers-java.main" target="11" />
+      <module name="Battleship1.Battleship-task-build-reports-tests.main" target="11" />
+      <module name="Battleship1.Battleship-task-build-test-results.main" target="11" />
+      <module name="Battleship1.Battleship-task-build-tmp.main" target="11" />
+      <module name="Battleship1.Battleship-task-out.main" target="11" />
+      <module name="Battleship1.Battleship-task.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-About_abstract_classes.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-Correct_statements.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-Features_of_an_abstract_method.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-Incorrect_declaration.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-IntBinaryOperation.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-Overriding_when_extending.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-Shape_hierarchy.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-Theory.main" target="11" />
+      <module name="Battleship1.Topics-Abstract_class-Users_and_WebSites.main" target="11" />
+      <module name="Battleship1.Topics-Enums_in_Java-Currencies.main" target="11" />
+      <module name="Battleship1.Topics-Enums_in_Java-Days_of_week.main" target="11" />
+      <module name="Battleship1.Topics-Enums_in_Java-Hidden_enumeration.main" target="11" />
+      <module name="Battleship1.Topics-Enums_in_Java-Reasons_to_use_enum.main" target="11" />
+      <module name="Battleship1.Topics-Enums_in_Java-Theory.main" target="11" />
+      <module name="Battleship1.Topics-Fields_and_methods_in_enum-Danger_levels.main" target="11" />
+      <module name="Battleship1.Topics-Fields_and_methods_in_enum-Robot_control.main" target="11" />
+      <module name="Battleship1.Topics-Fields_and_methods_in_enum-System_of_units.main" target="11" />
+      <module name="Battleship1.Topics-Fields_and_methods_in_enum-Theory.main" target="11" />
+      <module name="Battleship1.Topics-Polymorphism-Find_mistake.main" target="11" />
+      <module name="Battleship1.Topics-Polymorphism-Notification.main" target="11" />
+      <module name="Battleship1.Topics-Polymorphism-Publication_and_its_subclasses.main" target="11" />
+      <module name="Battleship1.Topics-Polymorphism-The_time_of_overloading.main" target="11" />
+      <module name="Battleship1.Topics-Polymorphism-Theory.main" target="11" />
+      <module name="Battleship1.util.main" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

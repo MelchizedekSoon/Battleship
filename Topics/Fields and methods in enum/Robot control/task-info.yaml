@@ -1,0 +1,269 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class Move {
+        public static void moveRobot(Robot robot, int toX, int toY) {
+            robot.stepForward(); // your implementation here
+        }
+    }
+
+    //Don't change code below
+
+    enum Direction {
+        UP(0, 1),
+        DOWN(0, -1),
+        LEFT(-1, 0),
+        RIGHT(1, 0);
+
+        private final int dx;
+        private final int dy;
+
+        Direction(int dx, int dy) {
+            this.dx = dx;
+            this.dy = dy;
+        }
+
+        public Direction turnLeft() {
+            switch (this) {
+                case UP:
+                    return LEFT;
+                case DOWN:
+                    return RIGHT;
+                case LEFT:
+                    return DOWN;
+                case RIGHT:
+                    return UP;
+                default:
+                    throw new IllegalStateException();
+            }
+        }
+
+        public Direction turnRight() {
+            switch (this) {
+                case UP:
+                    return RIGHT;
+                case DOWN:
+                    return LEFT;
+                case LEFT:
+                    return UP;
+                case RIGHT:
+                    return DOWN;
+                default:
+                    throw new IllegalStateException();
+            }
+        }
+
+        public int dx() {
+            return dx;
+        }
+
+        public int dy() {
+            return dy;
+        }
+    }
+
+    class Robot {
+        private int x;
+        private int y;
+        private Direction direction;
+
+        public Robot(int x, int y, Direction direction) {
+            this.x = x;
+            this.y = y;
+            this.direction = direction;
+        }
+
+        public void turnLeft() {
+            direction = direction.turnLeft();
+        }
+
+        public void turnRight() {
+            direction = direction.turnRight();
+        }
+
+        public void stepForward() {
+            x += direction.dx();
+            y += direction.dy();
+        }
+
+        public Direction getDirection() {
+            return direction;
+        }
+
+        public int getX() {
+            return x;
+        }
+
+        public int getY() {
+            return y;
+        }
+    }
+  learner_created: false
+- name: src/Temp.java
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/11522#comment
+status: Failed
+feedback:
+  message: |
+    Compilation error
+    Main.java:154: error: duplicate class: Direction
+    enum Direction {
+    ^
+    Main.java:23: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case UP:
+                     ^
+    Main.java:27: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case RIGHT:
+                     ^
+    Main.java:30: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case LEFT:
+                     ^
+    Main.java:61: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case DOWN:
+                     ^
+    Main.java:65: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case RIGHT:
+                     ^
+    Main.java:68: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case LEFT:
+                     ^
+    Main.java:99: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case DOWN:
+                     ^
+    Main.java:103: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case RIGHT:
+                     ^
+    Main.java:106: error: an enum switch case label must be the unqualified name of an enumeration constant
+                case LEFT:
+                     ^
+    Main.java:128: error: cannot find symbol
+            Robot robot = new Robot(0, 0, Direction.UP);
+                                                   ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:219: error: cannot find symbol
+            direction = direction.turnLeft();
+                                 ^
+      symbol:   method turnLeft()
+      location: variable direction of type Direction
+    Main.java:223: error: cannot find symbol
+            direction = direction.turnRight();
+                                 ^
+      symbol:   method turnRight()
+      location: variable direction of type Direction
+    Main.java:227: error: cannot find symbol
+            x += direction.dx();
+                          ^
+      symbol:   method dx()
+      location: variable direction of type Direction
+    Main.java:228: error: cannot find symbol
+            y += direction.dy();
+                          ^
+      symbol:   method dy()
+      location: variable direction of type Direction
+    Main.java:280: error: cannot find symbol
+            Robot robot = new Robot(0, 0, Direction.UP);
+                                                   ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:281: error: cannot find symbol
+            moveAndCheckWithHint(robot, 10, 0, 0, 0, Direction.UP);
+                                                              ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:285: error: cannot find symbol
+            Robot robot = new Robot(0, 0, Direction.UP);
+                                                   ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:286: error: cannot find symbol
+            moveAndCheckWithHint(robot, -10, 0, 0, 0, Direction.UP);
+                                                               ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:290: error: cannot find symbol
+            Robot robot = new Robot(0, 0, Direction.UP);
+                                                   ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:291: error: cannot find symbol
+            moveAndCheckWithHint(robot, 0, 10, 0, 0, Direction.UP);
+                                                              ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:295: error: cannot find symbol
+            Robot robot = new Robot(0, 0, Direction.UP);
+                                                   ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:296: error: cannot find symbol
+            moveAndCheckWithHint(robot, 0, -10, 0, 0, Direction.UP);
+                                                               ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:300: error: cannot find symbol
+            Robot robot = new Robot(0, 0, Direction.UP);
+                                                   ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:301: error: cannot find symbol
+            moveAndCheckWithHint(robot, 0, 0, 0, 0, Direction.UP);
+                                                             ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:305: error: cannot find symbol
+            Robot robot = new Robot(0, 0, Direction.UP);
+                                                   ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:306: error: cannot find symbol
+            moveAndCheckWithHint(robot, 100, 100, 0, 0, Direction.UP);
+                                                                 ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:310: error: cannot find symbol
+            Robot robot = new Robot(100, 100, Direction.UP);
+                                                       ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:311: error: cannot find symbol
+            moveAndCheckWithHint(robot, 0, 0, 100, 100, Direction.UP);
+                                                                 ^
+      symbol:   variable UP
+      location: class Direction
+    Main.java:315: error: cannot find symbol
+            Robot robot = new Robot(10000, 10000, Direction.DOWN);
+                                                           ^
+      symbol:   variable DOWN
+      location: class Direction
+    Main.java:316: error: cannot find symbol
+            moveAndCheckWithHint(robot, 0, 0, 10000, 10000, Direction.DOWN);
+                                                                     ^
+      symbol:   variable DOWN
+      location: class Direction
+    Main.java:320: error: cannot find symbol
+            Robot robot = new Robot(10000, 10000, Direction.LEFT);
+                                                           ^
+      symbol:   variable LEFT
+      location: class Direction
+    Main.java:321: error: cannot find symbol
+            moveAndCheckWithHint(robot, 0, 0, 10000, 10000, Direction.LEFT);
+                                                                     ^
+      symbol:   variable LEFT
+      location: class Direction
+    Main.java:325: error: cannot find symbol
+            Robot robot = new Robot(10000, 10000, Direction.RIGHT);
+                                                           ^
+      symbol:   variable RIGHT
+      location: class Direction
+    Main.java:326: error: cannot find symbol
+            moveAndCheckWithHint(robot, 0, 0, 10000, 10000, Direction.RIGHT);
+                                                                     ^
+      symbol:   variable RIGHT
+      location: class Direction
+    35 errors
+  time: Fri, 31 Dec 2021 03:19:35 UTC
+record: -1
