@@ -374,65 +374,6 @@ public class Main {
         System.out.println();
     }
 
-    public boolean isSunkenByP2() {
-        int shipLength = 0;
-        for (String coordinateString : this.aircraftCoordinates) {
-            String[] coordinatePair = coordinateString.split(" ");
-            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
-                shipLength++;
-                if (shipLength == 5) {
-                    this.aircraftCoordinates = new ArrayList<>();
-                    return true;
-                }
-            }
-        }
-        shipLength = 0;
-        for (String coordinateString : this.battleshipCoordinates) {
-            String[] coordinatePair = coordinateString.split(" ");
-            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
-                shipLength++;
-                if (shipLength == 4) {
-                    this.battleshipCoordinates = new ArrayList<>();
-                    return true;
-                }
-            }
-        }
-        shipLength = 0;
-        for (String coordinateString : this.submarineCoordinates) {
-            String[] coordinatePair = coordinateString.split(" ");
-            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
-                shipLength++;
-                if (shipLength == 3) {
-                    this.submarineCoordinates = new ArrayList<>();
-                    return true;
-                }
-            }
-        }
-        shipLength = 0;
-        for (String coordinateString : this.cruiserCoordinates) {
-            String[] coordinatePair = coordinateString.split(" ");
-            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
-                shipLength++;
-                if (shipLength == 3) {
-                    this.cruiserCoordinates = new ArrayList<>();
-                    return true;
-                }
-            }
-        }
-        shipLength = 0;
-        for (String coordinateString : this.destroyerCoordinates) {
-            String[] coordinatePair = coordinateString.split(" ");
-            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
-                shipLength++;
-                if (shipLength == 2) {
-                    this.destroyerCoordinates = new ArrayList<>();
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
     public boolean isSunkenByP1() {
         int shipLength = 0;
         for (String coordinateString : this.aircraftCoordinates2) {
@@ -485,6 +426,65 @@ public class Main {
                 shipLength++;
                 if (shipLength == 2) {
                     this.destroyerCoordinates2 = new ArrayList<>();
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean isSunkenByP2() {
+        int shipLength = 0;
+        for (String coordinateString : this.aircraftCoordinates) {
+            String[] coordinatePair = coordinateString.split(" ");
+            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
+                shipLength++;
+                if (shipLength == 5) {
+                    this.aircraftCoordinates = new ArrayList<>();
+                    return true;
+                }
+            }
+        }
+        shipLength = 0;
+        for (String coordinateString : this.battleshipCoordinates) {
+            String[] coordinatePair = coordinateString.split(" ");
+            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
+                shipLength++;
+                if (shipLength == 4) {
+                    this.battleshipCoordinates = new ArrayList<>();
+                    return true;
+                }
+            }
+        }
+        shipLength = 0;
+        for (String coordinateString : this.submarineCoordinates) {
+            String[] coordinatePair = coordinateString.split(" ");
+            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
+                shipLength++;
+                if (shipLength == 3) {
+                    this.submarineCoordinates = new ArrayList<>();
+                    return true;
+                }
+            }
+        }
+        shipLength = 0;
+        for (String coordinateString : this.cruiserCoordinates) {
+            String[] coordinatePair = coordinateString.split(" ");
+            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
+                shipLength++;
+                if (shipLength == 3) {
+                    this.cruiserCoordinates = new ArrayList<>();
+                    return true;
+                }
+            }
+        }
+        shipLength = 0;
+        for (String coordinateString : this.destroyerCoordinates) {
+            String[] coordinatePair = coordinateString.split(" ");
+            if (Objects.equals(this.battleship[Integer.parseInt(coordinatePair[0])][Integer.parseInt(coordinatePair[1])], "X")) {
+                shipLength++;
+                if (shipLength == 2) {
+                    this.destroyerCoordinates = new ArrayList<>();
                     return true;
                 }
             }
